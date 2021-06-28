@@ -51,7 +51,7 @@ class UserController extends Controller
             'name'=>'required|alpha|max:15|min:3',
             'lastname'=>'required|alpha|max:15|min:3',
             'nationality'=>'required|',
-            'dni'=>'required|integer|unique:users,dni|',
+            'dni'=>'required|integer',
         ];
         $validator = Validator::make(request()->all(), $rules);
         if ($validator->fails()) {
